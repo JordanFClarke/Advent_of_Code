@@ -5,14 +5,22 @@ List<carrierElf> ListOfElves = calorieCounting.carrierList();
 
 //Day 1: Calorie Counting
 int maxCals = 0;
-foreach (carrierElf elf in ListOfElves)
+List<int> topCals = new List<int>(3);
+
+maxCals = GetMaxCals(ListOfElves, maxCals);
+Console.WriteLine($"Day 1 solution: the elf with the most calories is carrying: {maxCals}");
+
+
+
+static int GetMaxCals(List<carrierElf> ListOfElves, int maxCals)
 {
-    if (elf.carriedCalories > maxCals)
+    foreach (carrierElf elf in ListOfElves)
     {
-        maxCals = elf.carriedCalories;
+        if (elf.carriedCalories > maxCals)
+        {
+            maxCals = elf.carriedCalories;
+        }
+        //Console.WriteLine(elf.carriedCalories);
     }
-    //Console.WriteLine(elf.carriedCalories);
+    return maxCals;
 }
-Console.WriteLine(maxCals);
-
-

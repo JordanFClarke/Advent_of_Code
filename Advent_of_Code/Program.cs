@@ -33,5 +33,23 @@ static List<int> GetMaxCals(List<carrierElf> ListOfElves, List<int> maxCals)
     return maxCals;
 }
 
+//End of Day 1
 */
 
+/* //Day 2: Rock Paper Scissors
+
+var RPS = new rockPaperScissors();
+int scoreSum = 0;
+int modScoreSum = 0;
+foreach(rockPaperScissors.RPSmatch battle in RPS.matches)
+{
+    scoreSum += battle.score;
+    battle.RPSstring = rockPaperScissors.RPSmatch.decipher(battle.RPSstring);
+    modScoreSum += battle.score;
+}
+
+Console.WriteLine($"following the initial logic, you achieve a score of {scoreSum}");
+Console.WriteLine($"following the fixed logic, you achieve a score of {modScoreSum}");
+
+//End of Day 2
+*/
